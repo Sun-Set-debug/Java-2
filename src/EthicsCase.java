@@ -27,6 +27,9 @@ public class EthicsCase {
     public String getCategory(){
         return category;
     }
+    public Verdict getStudentVerdict(){
+        return verdict;
+    }
     @Override
     public String toString(){
         return "Title: " + caseTitle + ", description: " + description + ", category: " + category;
