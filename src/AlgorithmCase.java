@@ -7,6 +7,17 @@
  *
  * @author fuche
  */
-public class AlgorithmCase {
-    
+class AlgorithmCase extends EthicsCase {
+    private String biasType;
+    AlgorithmCase(String caseTitle, String description, String biasType){
+        super(caseTitle, description, "catagoty");
+        this.biasType = biasType;
+    }
+    public String getBiasType(){
+        return biasType;
+    }
+    @Override
+    public String toString(){
+        return super.toString() + ", bias type: " + biasType;
+    }
 }
