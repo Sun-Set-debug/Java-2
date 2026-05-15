@@ -10,13 +10,40 @@ import java.awt.event.WindowAdapter;
  */
 public class JavaApplication2 extends javax.swing.JFrame {
 
+    public static EthicsCase [] cases = new EthicsCase[8];
     /**
      * Creates new form JavaApplication2
      */
     public JavaApplication2() {
         initComponents();
+        cases[0] = new PrivacyCase(
+                "The Always-On Microphone",
+                "A smart speaker company recorded household conversations even when the device was not activated. Employees reviewed the recordings.",
+                "audio recordings");
+        cases[1] = new PrivacyCase(
+                "The Health App Leak",
+                "A fitness tracking application quietly sold users' heart rates and sleep cycles to private health insurance corporations to adjust premiums.",
+                "biometric and health data");
+        cases[2] = new AlgorithmCase("The Biased Hiring Bot",
+                "An AI resume screener trained on historical tech industry data automatically downgraded applications containing the word 'women's'.",
+                "gender discrimination");
+        cases[3] = new AlgorithmCase("Predictive Policing Error",
+                "An algorithmic facial recognition software used by police falsely matched an innocent citizen with a suspect due to poor training data.",
+                "racial misidentification");
+        cases[4] = new MisinformationCase("The Deepfake Election Video",
+                "A highly realistic, AI-generated video of a political candidate admitting to bribery was circulated on social media two days before voting.",
+                "deepfake video");
+        cases[5] = new MisinformationCase("The Synthetic Health Article",
+                "An automated blog network used large language models to generate thousands of fake medical articles claiming lemon juice cures viral infections.",
+                "AI-generated text");
+        cases[6] = new IntellectualPropertyCase("The Copied Codebase",
+                "A generative AI coding assistant suggested an entire block of proprietary, copyrighted software engineering code without attribution or license.",
+                "source code software license");
+        cases[7] = new IntellectualPropertyCase("The AI Art Generation",
+                "A commercial image generator was trained on millions of digital paintings from independent artists without their explicit consent or royalties.",
+                "digital artwork and illustrations");
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -26,21 +53,89 @@ public class JavaApplication2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setText("Ethics Evaluator");
+
+        jLabel2.setText("What do you stand on this scale?");
+
+        jLabel3.setText("A Tech Optimist");
+
+        jLabel4.setText("A Cautious Realist");
+
+        jLabel5.setText("A Critical Thinker");
+
+        jLabel6.setText("A Ethics Watchdog");
+
+        jButton1.setText("Start Evaluator");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(141, 141, 141))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(105, 105, 105)
+                        .addComponent(jLabel2))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(149, 149, 149)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel6))))
+                .addContainerGap(106, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel6)
+                .addGap(18, 18, 18)
+                .addComponent(jButton1)
+                .addContainerGap(51, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        new ScenarioPage1().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +173,12 @@ public class JavaApplication2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     // End of variables declaration//GEN-END:variables
 }
