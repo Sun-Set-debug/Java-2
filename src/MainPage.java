@@ -2,46 +2,59 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowAdapter;
+
 /**
  *
  * @author fuche
  */
-public class JavaApplication2 extends javax.swing.JFrame {
+public class MainPage extends javax.swing.JFrame {
 
     public static EthicsCase [] cases = new EthicsCase[8];
     /**
      * Creates new form JavaApplication2
      */
-    public JavaApplication2() {
+    public MainPage() {
         initComponents();
         cases[0] = new PrivacyCase(
                 "The Always-On Microphone",
                 "A smart speaker company recorded household conversations even when the device was not activated. Employees reviewed the recordings.",
-                "audio recordings");
+                "audio recordings"
+        );
         cases[1] = new PrivacyCase(
                 "The Health App Leak",
                 "A fitness tracking application quietly sold users' heart rates and sleep cycles to private health insurance corporations to adjust premiums.",
-                "biometric and health data");
-        cases[2] = new AlgorithmCase("The Biased Hiring Bot",
+                "biometric and health data"
+        );
+        cases[2] = new AlgorithmCase(
+                "The Biased Hiring Bot",
                 "An AI resume screener trained on historical tech industry data automatically downgraded applications containing the word 'women's'.",
-                "gender discrimination");
-        cases[3] = new AlgorithmCase("Predictive Policing Error",
+                "gender discrimination"
+        );
+        cases[3] = new AlgorithmCase(
+                "Predictive Policing Error",
                 "An algorithmic facial recognition software used by police falsely matched an innocent citizen with a suspect due to poor training data.",
-                "racial misidentification");
-        cases[4] = new MisinformationCase("The Deepfake Election Video",
+                "racial misidentification"
+        );
+        cases[4] = new MisinformationCase(
+                "The Deepfake Election Video",
                 "A highly realistic, AI-generated video of a political candidate admitting to bribery was circulated on social media two days before voting.",
-                "deepfake video");
-        cases[5] = new MisinformationCase("The Synthetic Health Article",
+                "deepfake video"
+        );
+        cases[5] = new MisinformationCase(
+                "The Synthetic Health Article",
                 "An automated blog network used large language models to generate thousands of fake medical articles claiming lemon juice cures viral infections.",
-                "AI-generated text");
-        cases[6] = new IntellectualPropertyCase("The Copied Codebase",
+                "AI-generated text"
+        );
+        cases[6] = new IntellectualPropertyCase(
+                "The Copied Codebase",
                 "A generative AI coding assistant suggested an entire block of proprietary, copyrighted software engineering code without attribution or license.",
-                "source code software license");
-        cases[7] = new IntellectualPropertyCase("The AI Art Generation",
+                "source code software license"
+        );
+        cases[7] = new IntellectualPropertyCase(
+                "The AI Art Generation",
                 "A commercial image generator was trained on millions of digital paintings from independent artists without their explicit consent or royalties.",
-                "digital artwork and illustrations");
+                "digital artwork and illustrations"
+        );
     }
     
     /**
@@ -154,20 +167,21 @@ public class JavaApplication2 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(JavaApplication2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(JavaApplication2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(JavaApplication2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(JavaApplication2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new JavaApplication2().setVisible(true);
+                new MainPage().setVisible(true);
             }
         });
     }
