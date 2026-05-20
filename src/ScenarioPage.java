@@ -109,7 +109,7 @@ public class ScenarioPage extends javax.swing.JFrame {
                                     .addComponent(Unethical, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(56, 56, 56)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(44, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -147,10 +147,10 @@ public class ScenarioPage extends javax.swing.JFrame {
         String userReason = Reason.getText();
         MainPage.cases[MainPage.qIndex].verdict.setReason(userReason);
         if (Ethical.isSelected()) {
-            MainPage.ethicalCount++;
+            //MainPage.ethicalCount++;
             MainPage.cases[MainPage.qIndex].verdict.setStudentVerdict("Ethical");
         } else if (Unethical.isSelected()) {
-            MainPage.unethicalCount++;
+            //MainPage.unethicalCount++;
             MainPage.cases[MainPage.qIndex].verdict.setStudentVerdict("Unethical");
         } 
         MainPage.qIndex++;

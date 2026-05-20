@@ -32,14 +32,14 @@
               <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
               <Component id="ethical" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
-              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+              <Component id="unethical" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
               <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
-              <Component id="unethical" min="-2" max="-2" attributes="0"/>
+              <Component id="lable" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
           </Group>
           <Group type="102" attributes="0">
@@ -57,11 +57,11 @@
               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="ethical" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="unethical" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="unethical" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lable" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -82,7 +82,7 @@
         <Property name="text" type="java.lang.String" value="x"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel3">
+    <Component class="javax.swing.JLabel" name="unethical">
       <Properties>
         <Property name="text" type="java.lang.String" value="y"/>
       </Properties>
@@ -92,7 +92,7 @@
         <Property name="text" type="java.lang.String" value="Ethical"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="unethical">
+    <Component class="javax.swing.JLabel" name="lable">
       <Properties>
         <Property name="text" type="java.lang.String" value="Unethical"/>
       </Properties>

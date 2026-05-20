@@ -89,9 +89,9 @@ public class ResultPage extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         ethical = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         unethical = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        lable = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         Result = new javax.swing.JTextArea();
 
@@ -101,11 +101,11 @@ public class ResultPage extends javax.swing.JFrame {
 
         ethical.setText("x");
 
-        jLabel3.setText("y");
+        unethical.setText("y");
 
         jLabel4.setText("Ethical");
 
-        unethical.setText("Unethical");
+        lable.setText("Unethical");
 
         Result.setColumns(20);
         Result.setRows(5);
@@ -123,13 +123,13 @@ public class ResultPage extends javax.swing.JFrame {
                 .addGap(96, 96, 96)
                 .addComponent(ethical)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel3)
+                .addComponent(unethical)
                 .addGap(112, 112, 112))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(81, 81, 81)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(unethical)
+                .addComponent(lable)
                 .addGap(85, 85, 85))
             .addGroup(layout.createSequentialGroup()
                 .addGap(149, 149, 149)
@@ -144,10 +144,10 @@ public class ResultPage extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ethical)
-                    .addComponent(jLabel3))
+                    .addComponent(unethical))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(unethical)
+                    .addComponent(lable)
                     .addComponent(jLabel4))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE)
@@ -196,9 +196,9 @@ public class ResultPage extends javax.swing.JFrame {
     private javax.swing.JTextArea Result;
     private javax.swing.JLabel ethical;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lable;
     private javax.swing.JLabel unethical;
     // End of variables declaration//GEN-END:variables
 }

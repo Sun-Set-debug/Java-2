@@ -10,7 +10,7 @@
 public class MainPage extends javax.swing.JFrame {
 
     public static EthicsCase [] cases = new EthicsCase[8];
-    public static int qIndex = 1;
+    public static int qIndex = 0;
     public static int ethicalCount = 0;
     public static int unethicalCount = 0;
     /**
