@@ -184,7 +184,7 @@ public class ScenarioPage extends javax.swing.JFrame {
                             verdict = MainPage.cases[i].verdict.getStudentVerdict();
                         }
                         String reason = "N/A";
-                        if (MainPage.cases[i].verdict.getReason() != null){
+                        if (!MainPage.cases[i].verdict.getReason().equalsIgnoreCase("")){
                             reason = MainPage.cases[i].verdict.getReason();
                         }
                         output.printf("Case %d: %s, Verdict: %s, Reason: %s\n", (i+1), title,verdict, reason);

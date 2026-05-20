@@ -1,0 +1,8 @@
+Case 1: The Always-On Microphone, Verdict: No verdict, Reason: N/A
+Case 2: The Health App Leak, Verdict: No verdict, Reason: N/A
+Case 3: The Biased Hiring Bot, Verdict: No verdict, Reason: N/A
+Case 4: Predictive Policing Error, Verdict: No verdict, Reason: N/A
+Case 5: The Deepfake Election Video, Verdict: No verdict, Reason: N/A
+Case 6: The Synthetic Health Article, Verdict: No verdict, Reason: N/A
+Case 7: The Copied Codebase, Verdict: Unethical, Reason: a
+Case 8: The AI Art Generation, Verdict: Ethical, Reason: a
