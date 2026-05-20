@@ -37,7 +37,7 @@ public class MainPage extends javax.swing.JFrame {
                 "Predictive Policing Error",
                 "An algorithmic facial recognition \nsoftware used by police falsely \nmatched an innocent citizen with a \nsuspect due to poor training data.",
                 "racial misidentification"
-        );
+        ); 
         cases[4] = new MisinformationCase(
                 "The Deepfake Election Video",
                 "A highly realistic, AI-generated \nvideo of a political candidate \nadmitting to bribery was circulated \non social media two days \nbefore voting.",

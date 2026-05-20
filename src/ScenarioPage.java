@@ -152,7 +152,7 @@ public class ScenarioPage extends javax.swing.JFrame {
         } else if (Unethical.isSelected()) {
             MainPage.unethicalCount++;
             MainPage.cases[MainPage.qIndex].verdict.setStudentVerdict("Unethical");
-        }
+        } 
         MainPage.qIndex++;
         setQuestion();
     }//GEN-LAST:event_SubmitActionPerformed

@@ -29,7 +29,7 @@ public class ResultPage extends javax.swing.JFrame {
                             MainPage.unethicalCount++;
                         }
                     }
-                }
+                } 
                 ethical.setText(MainPage.ethicalCount + "");
                 unethical.setText(MainPage.unethicalCount + "");
                 String profile;
