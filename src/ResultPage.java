@@ -20,33 +20,58 @@ public class ResultPage extends javax.swing.JFrame {
             public void windowActivated(WindowEvent e) {
                 System.out.println("JFrame is now focused!");
                 //add code here
-                int ethicalCount = 0;
-                int unethicalCount = 0;
                 for(EthicsCase c: MainPage.cases){
                     if (c != null && c.verdict != null){
                         String choice = c.verdict.getStudentVerdict();
                         if ("Ethical".equalsIgnoreCase(choice)){
-                            ethicalCount++;
+                            MainPage.ethicalCount++;
                         }else if ("Unethical".equalsIgnoreCase(choice)){
-                            unethicalCount++;
+                            MainPage.unethicalCount++;
                         }
                     }
-                }
-                ethical.setText(ethicalCount + "");
-                unethical.setText(unethicalCount + "");
-                String profile = "";
-                switch(ethicalCount){
+                } 
+                ethical.setText(MainPage.ethicalCount + "");
+                unethical.setText(MainPage.unethicalCount + "");
+                String profile;
+                switch(MainPage.ethicalCount){
                     case 6,7,8:
-                        profile = "";
+                        profile = "The Technology Optimist\n" +
+                            "\n" +
+                            "Description:\n" +
+                            "You focus on the positive potential of \n" + 
+                            "innovation. You believe technology can \n" + 
+                            "solve many of humanity’s biggest problems \n" +
+                            "and that progress should not be slowed down \n" +
+                            "by excessive fear or minor risks.";
                         break;
                     case 4,5:
-                        profile = "";
+                        profile = "The Cautious Realist\n" +
+                            "\n" +
+                            "Description:\n" +
+                            "You recognize both the advantages and risks of \n" +
+                            "technology. You believe innovation improves \n" + 
+                            "people’s lives, but it also requires clear laws, \n" +
+                            "accountability, and responsible oversight to \n" +
+                            "protect society.";
                         break;
                     case 2,3:
-                        profile = "";
+                        profile = "The Privacy Guardian\n" +
+                            "\n" +
+                            "Description:\n" +
+                            "You believe ethics and personal privacy should \n" + 
+                            "always come before technological progress. \n" + 
+                            "While technology can be beneficial, companies \n" + 
+                            "must be closely regulated to prevent data misuse, \n" + 
+                            "surveillance, and algorithmic bias.";
                         break;
                     default:
-                        profile = "";
+                        profile = "The Tech Skeptic\n" +
+                            "\n" +
+                            "Description:\n" +
+                            "You’re highly skeptical of modern technology \n" + 
+                            "and big tech companies. You believe that \n" + 
+                            "profit-driven innovation often comes at the \n" + 
+                            "cost of human rights, privacy, and social fairness.";
                 }
                 Result.setText(profile);
             }
@@ -90,43 +115,43 @@ public class ResultPage extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1)
+                .addContainerGap())
             .addGroup(layout.createSequentialGroup()
-                .addGap(80, 80, 80)
+                .addGap(96, 96, 96)
+                .addComponent(ethical)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel3)
+                .addGap(112, 112, 112))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(81, 81, 81)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(unethical)
-                .addGap(97, 97, 97))
+                .addGap(85, 85, 85))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(149, 149, 149)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(99, 99, 99)
-                        .addComponent(ethical)
-                        .addGap(131, 131, 131)
-                        .addComponent(jLabel3))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(57, 57, 57)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(68, Short.MAX_VALUE))
+                .addGap(149, 149, 149)
+                .addComponent(jLabel1)
+                .addGap(97, 169, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(jLabel1)
-                .addGap(43, 43, 43)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ethical)
                     .addComponent(jLabel3))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(unethical))
+                    .addComponent(unethical)
+                    .addComponent(jLabel4))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();

@@ -10,6 +10,9 @@
 public class MainPage extends javax.swing.JFrame {
 
     public static EthicsCase [] cases = new EthicsCase[8];
+    public static int qIndex = 1;
+    public static int ethicalCount = 0;
+    public static int unethicalCount = 0;
     /**
      * Creates new form JavaApplication2
      */
@@ -17,42 +20,42 @@ public class MainPage extends javax.swing.JFrame {
         initComponents();
         cases[0] = new PrivacyCase(
                 "The Always-On Microphone",
-                "A smart speaker company recorded household conversations even when the device was not activated. Employees reviewed the recordings.",
+                "A smart speaker company recorded \nhousehold conversations even when \nthe device was not activated. Employees \nreviewed the recordings.",
                 "audio recordings"
         );
         cases[1] = new PrivacyCase(
                 "The Health App Leak",
-                "A fitness tracking application quietly sold users' heart rates and sleep cycles to private health insurance corporations to adjust premiums.",
+                "A fitness tracking application \nquietly sold users' heart rates and \nsleep cycles to private health \ninsurance corporations to \nadjust premiums.",
                 "biometric and health data"
         );
         cases[2] = new AlgorithmCase(
                 "The Biased Hiring Bot",
-                "An AI resume screener trained on historical tech industry data automatically downgraded applications containing the word 'women's'.",
+                "An AI resume screener trained on \nhistorical tech industry data \nautomatically downgraded applications \ncontaining the word 'women's'.",
                 "gender discrimination"
         );
         cases[3] = new AlgorithmCase(
                 "Predictive Policing Error",
-                "An algorithmic facial recognition software used by police falsely matched an innocent citizen with a suspect due to poor training data.",
+                "An algorithmic facial recognition \nsoftware used by police falsely \nmatched an innocent citizen with a \nsuspect due to poor training data.",
                 "racial misidentification"
-        );
+        ); 
         cases[4] = new MisinformationCase(
                 "The Deepfake Election Video",
-                "A highly realistic, AI-generated video of a political candidate admitting to bribery was circulated on social media two days before voting.",
+                "A highly realistic, AI-generated \nvideo of a political candidate \nadmitting to bribery was circulated \non social media two days \nbefore voting.",
                 "deepfake video"
         );
         cases[5] = new MisinformationCase(
                 "The Synthetic Health Article",
-                "An automated blog network used large language models to generate thousands of fake medical articles claiming lemon juice cures viral infections.",
+                "An automated blog network used \nlarge language models to generate \nthousands of fake medical articles \nclaiming lemon juice cures \nviral infections.",
                 "AI-generated text"
         );
         cases[6] = new IntellectualPropertyCase(
                 "The Copied Codebase",
-                "A generative AI coding assistant suggested an entire block of proprietary, copyrighted software engineering code without attribution or license.",
+                "A generative AI coding assistant \nsuggested an entire block of \nproprietary, copyrighted software \nengineering code without \nattribution or license.",
                 "source code software license"
         );
         cases[7] = new IntellectualPropertyCase(
                 "The AI Art Generation",
-                "A commercial image generator was trained on millions of digital paintings from independent artists without their explicit consent or royalties.",
+                "A commercial image generator was \ntrained on millions of digital \npaintings from independent artists \nwithout their explicit consent \nor royalties.",
                 "digital artwork and illustrations"
         );
     }
@@ -146,7 +149,7 @@ public class MainPage extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        new ScenarioPage1().setVisible(true);
+        new ScenarioPage().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
