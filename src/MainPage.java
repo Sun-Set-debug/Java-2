@@ -2,7 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-
+import java.io.File;
+import java.io.IOException;
+import java.util.Scanner;
 /**
  *
  * @author fuche
@@ -180,9 +182,35 @@ public class MainPage extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
-
+        try{
+            File question = new File("question1.txt");
+            try (Scanner questionInput = new Scanner(question)) {
+                int index = 0;
+                while (questionInput.hasNextLine() && index<8){
+                    String line = questionInput.nextLine();
+                    String [] part = line.split(",");
+                    String title = part[0];
+                    String category = part[1];
+                    String type = part[2];
+                    String description = part[3];
+                    if (category.equalsIgnoreCase("Privacy")){
+                        cases[index] = new PrivacyCase(title, description, type);
+                    }else if (category.equalsIgnoreCase("Algorithm")){
+                        cases[index] = new AlgorithmCase(title, description, type);
+                    }else if (category.equalsIgnoreCase("IntellectualProperty")){
+                        cases[index] = new IntellectualPropertyCase(title, description, type);
+                    }else if(category.equalsIgnoreCase("Misinformation")){
+                        cases[index] = new MisinformationCase(title, description, type);
+                    }
+                    index++;
+                }
+            }
+        }catch(IOException e){
+            System.out.println("error");
+        }
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new MainPage().setVisible(true);
             }

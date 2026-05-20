@@ -1,0 +1,8 @@
+The Always-On Microphone, A smart speaker company recorded \nhousehold conversations even when \nthe device was not activated. Employees \nreviewed the recordings.,audio recordings
+The Health App Leak,A fitness tracking application \nquietly sold users' heart rates and \nsleep cycles to private health \ninsurance corporations to \nadjust premiums.,biometric and health data
+The Biased Hiring Bot,An AI resume screener trained on \nhistorical tech industry data \nautomatically downgraded applications \ncontaining the word 'women's'.,gender discrimination
+Predictive Policing Error,An algorithmic facial recognition \nsoftware used by police falsely \nmatched an innocent citizen with a \nsuspect due to poor training data.,racial misidentification
+The Deepfake Election Video,A highly realistic, AI-generated \nvideo of a political candidate \nadmitting to bribery was circulated \non social media two days \nbefore voting.,deepfake video
+The Synthetic Health Article,An automated blog network used \nlarge language models to generate \nthousands of fake medical articles \nclaiming lemon juice cures \nviral infections.,AI-generated text
+The Copied Codebase,A generative AI coding assistant \nsuggested an entire block of \nproprietary, copyrighted software \nengineering code without \nattribution or license.,source code software license
+The AI Art Generation,A commercial image generator was \ntrained on millions of digital \npaintings from independent artists \nwithout their explicit consent \nor royalties.,digital artwork and illustrations

@@ -20,6 +20,8 @@ public class ResultPage extends javax.swing.JFrame {
             public void windowActivated(WindowEvent e) {
                 System.out.println("JFrame is now focused!");
                 //add code here
+                MainPage.ethicalCount = 0;
+                MainPage.unethicalCount = 0;
                 for(EthicsCase c: MainPage.cases){
                     if (c != null && c.verdict != null){
                         String choice = c.verdict.getStudentVerdict();

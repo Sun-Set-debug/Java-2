@@ -2,7 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-
+import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.io.IOException;
 /**
  *
  * @author fuche
@@ -156,7 +158,7 @@ public class ScenarioPage extends javax.swing.JFrame {
         MainPage.qIndex++;
         setQuestion();
     }//GEN-LAST:event_SubmitActionPerformed
-public void setQuestion(){
+    public void setQuestion(){
         if ( MainPage.qIndex != 8){
             Title.setText(MainPage.cases[MainPage.qIndex].getCaseTitle() + "");
             Category.setText(MainPage.cases[MainPage.qIndex].getCategory() + "");
@@ -165,9 +167,32 @@ public void setQuestion(){
             buttonGroup1.clearSelection();
             number.setText(MainPage.qIndex + 1 + "");
         }else{
+            saveFile();
             MainPage.qIndex = 0;
             new ResultPage().setVisible(true);
             this.setVisible(false);
+        }
+    }
+    public static void saveFile(){
+        try{
+            try (PrintWriter output = new PrintWriter(new FileWriter("src/result.txt",false))) {
+                for (int i = 0; i < MainPage.cases.length; i++){
+                    if (MainPage.cases[i] != null){
+                        String title = MainPage.cases[i].getCaseTitle();
+                        String verdict = "N/A";
+                        if (MainPage.cases[i].verdict != null){
+                            verdict = MainPage.cases[i].verdict.getStudentVerdict();
+                        }
+                        String reason = "N/A";
+                        if (MainPage.cases[i].verdict.getReason() != null){
+                            reason = MainPage.cases[i].verdict.getReason();
+                        }
+                        output.printf("Case %d: %s, Verdict: %s, Reason: %s\n", (i+1), title,verdict, reason);
+                    }
+                }
+            }
+        }catch(IOException e){
+            System.err.println("error");
         }
     }
     /**
