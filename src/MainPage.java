@@ -20,46 +20,6 @@ public class MainPage extends javax.swing.JFrame {
      */
     public MainPage() {
         initComponents();
-        cases[0] = new PrivacyCase(
-                "The Always-On Microphone",
-                "A smart speaker company recorded \nhousehold conversations even when \nthe device was not activated. Employees \nreviewed the recordings.",
-                "audio recordings"
-        );
-        cases[1] = new PrivacyCase(
-                "The Health App Leak",
-                "A fitness tracking application \nquietly sold users' heart rates and \nsleep cycles to private health \ninsurance corporations to \nadjust premiums.",
-                "biometric and health data"
-        );
-        cases[2] = new AlgorithmCase(
-                "The Biased Hiring Bot",
-                "An AI resume screener trained on \nhistorical tech industry data \nautomatically downgraded applications \ncontaining the word 'women's'.",
-                "gender discrimination"
-        );
-        cases[3] = new AlgorithmCase(
-                "Predictive Policing Error",
-                "An algorithmic facial recognition \nsoftware used by police falsely \nmatched an innocent citizen with a \nsuspect due to poor training data.",
-                "racial misidentification"
-        ); 
-        cases[4] = new MisinformationCase(
-                "The Deepfake Election Video",
-                "A highly realistic, AI-generated \nvideo of a political candidate \nadmitting to bribery was circulated \non social media two days \nbefore voting.",
-                "deepfake video"
-        );
-        cases[5] = new MisinformationCase(
-                "The Synthetic Health Article",
-                "An automated blog network used \nlarge language models to generate \nthousands of fake medical articles \nclaiming lemon juice cures \nviral infections.",
-                "AI-generated text"
-        );
-        cases[6] = new IntellectualPropertyCase(
-                "The Copied Codebase",
-                "A generative AI coding assistant \nsuggested an entire block of \nproprietary, copyrighted software \nengineering code without \nattribution or license.",
-                "source code software license"
-        );
-        cases[7] = new IntellectualPropertyCase(
-                "The AI Art Generation",
-                "A commercial image generator was \ntrained on millions of digital \npaintings from independent artists \nwithout their explicit consent \nor royalties.",
-                "digital artwork and illustrations"
-        );
     }
     
     /**
