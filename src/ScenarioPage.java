@@ -160,43 +160,90 @@ public class ScenarioPage extends javax.swing.JFrame {
         MainPage.qIndex++;
         setQuestion();
     }//GEN-LAST:event_SubmitActionPerformed
-    public void setQuestion(){
-        if ( MainPage.qIndex != 8){
-            Title.setText(MainPage.cases[MainPage.qIndex].getCaseTitle() + "");
-            Category.setText(MainPage.cases[MainPage.qIndex].getCategory() + "");
-            description.setText(MainPage.cases[MainPage.qIndex].getDescription() + "");
-            Reason.setText("");
-            buttonGroup1.clearSelection();
-            number.setText(MainPage.qIndex + 1 + "");
-        }else{
-            saveFile();
-            MainPage.qIndex = 0;
-            new ResultPage().setVisible(true);
-            this.setVisible(false);
-        }
+public void setQuestion() {
+
+    // If there are still questions left
+    if (MainPage.qIndex != 8) {
+
+        // Set UI components using current case data
+        Title.setText(MainPage.cases[MainPage.qIndex].getCaseTitle());
+        Category.setText(MainPage.cases[MainPage.qIndex].getCategory());
+        description.setText(MainPage.cases[MainPage.qIndex].getDescription());
+
+        // Clear previous input fields
+        Reason.setText("");
+        buttonGroup1.clearSelection();
+
+        // Display question number (1-based index)
+        number.setText(MainPage.qIndex + 1 + "");
+
+    } else {
+
+        // All questions completed → save results
+        saveFile();
+
+        // Reset question index for future runs
+        MainPage.qIndex = 0;
+
+        // Open result page
+        new ResultPage().setVisible(true);
+
+        // Hide current window
+        this.setVisible(false);
     }
-    public static void saveFile(){
-        try{
-            try (PrintWriter output = new PrintWriter(new FileWriter("src/result.txt",false))) {
-                for (int i = 0; i < MainPage.cases.length; i++){
-                    if (MainPage.cases[i] != null){
-                        String title = MainPage.cases[i].getCaseTitle();
-                        String verdict = "N/A";
-                        if (MainPage.cases[i].verdict != null){
-                            verdict = MainPage.cases[i].verdict.getStudentVerdict();
-                        }
-                        String reason = "N/A";
-                        if (!MainPage.cases[i].verdict.getReason().equalsIgnoreCase("")){
-                            reason = MainPage.cases[i].verdict.getReason();
-                        }
-                        output.printf("Case %d: %s, Verdict: %s, Reason: %s\n", (i+1), title,verdict, reason);
+}
+
+/**
+ * Saves all case results (verdict + reason) into a text file.
+ * 
+ * Each line contains:
+ * Case number, title, verdict, and reason.
+ */
+public static void saveFile() {
+
+    try {
+
+        try (PrintWriter output =
+                     new PrintWriter(new FileWriter("src/result.txt", false))) {
+
+            for (int i = 0; i < MainPage.cases.length; i++) {
+
+                if (MainPage.cases[i] != null) {
+
+                    String title = MainPage.cases[i].getCaseTitle();
+
+                    // Default verdict if none selected
+                    String verdict = "N/A";
+
+                    if (MainPage.cases[i].verdict != null) {
+                        verdict = MainPage.cases[i].verdict.getStudentVerdict();
                     }
+
+                    // Default reason if empty
+                    String reason = "N/A";
+
+                    if (!MainPage.cases[i].verdict.getReason().equalsIgnoreCase("")) {
+                        reason = MainPage.cases[i].verdict.getReason();
+                    }
+
+                    // Write formatted result to file
+                    output.printf(
+                        "Case %d: %s, Verdict: %s, Reason: %s\n",
+                        (i + 1),
+                        title,
+                        verdict,
+                        reason
+                    );
                 }
             }
-        }catch(IOException e){
-            System.err.println("error");
         }
+
+    } catch (IOException e) {
+
+        // Print error if file writing fails
+        System.err.println("error");
     }
+}
     /**
      * @param args the command line arguments
      */

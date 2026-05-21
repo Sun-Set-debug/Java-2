@@ -4,86 +4,108 @@
  */
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowAdapter;
+
 /**
- *
- * @author fuche
+ * The ResultPage class represents the final results screen
+ * of the Ethics Evaluator application.
+ * 
+ * It calculates how many "Ethical" and "Unethical" answers
+ * the user selected and generates a user profile based on
+ * their responses.
  */
 public class ResultPage extends javax.swing.JFrame {
 
     /**
-     * Creates new form ResultPage
+     * Creates and initializes the ResultPage window.
      */
     public ResultPage() {
         initComponents();
+
+        // Add a listener that runs code when the window becomes active
         addWindowListener(new WindowAdapter() {
+
             @Override
             public void windowActivated(WindowEvent e) {
+
                 System.out.println("JFrame is now focused!");
-                //add code here
+
+                // Reset counters before recalculating
                 MainPage.ethicalCount = 0;
                 MainPage.unethicalCount = 0;
-                for(EthicsCase c: MainPage.cases){
-                    if (c != null && c.verdict != null){
+
+                // Loop through all cases and count user verdicts
+                for (EthicsCase c : MainPage.cases) {
+
+                    if (c != null && c.verdict != null) {
+
                         String choice = c.verdict.getStudentVerdict();
-                        if ("Ethical".equalsIgnoreCase(choice)){
+
+                        if ("Ethical".equalsIgnoreCase(choice)) {
                             MainPage.ethicalCount++;
-                        }else if ("Unethical".equalsIgnoreCase(choice)){
+
+                        } else if ("Unethical".equalsIgnoreCase(choice)) {
                             MainPage.unethicalCount++;
                         }
                     }
-                } 
+                }
+
+                // Display counts on UI labels
                 ethical.setText(MainPage.ethicalCount + "");
                 unethical.setText(MainPage.unethicalCount + "");
+
                 String profile;
-                switch(MainPage.ethicalCount){
-                    case 6,7,8:
-                        profile = "The Technology Optimist\n" +
-                            "\n" +
-                            "Description:\n" +
-                            "You focus on the positive potential of \n" + 
-                            "innovation. You believe technology can \n" + 
-                            "solve many of humanity’s biggest problems \n" +
-                            "and that progress should not be slowed down \n" +
-                            "by excessive fear or minor risks.";
+
+                // Determine user profile based on ethical score
+                switch (MainPage.ethicalCount) {
+
+                    case 6, 7, 8:
+                        profile = "The Technology Optimist\n\n"
+                                + "Description:\n"
+                                + "You focus on the positive potential of \n"
+                                + "innovation. You believe technology can \n"
+                                + "solve many of humanity’s biggest problems \n"
+                                + "and that progress should not be slowed down \n"
+                                + "by excessive fear or minor risks.";
                         break;
-                    case 4,5:
-                        profile = "The Cautious Realist\n" +
-                            "\n" +
-                            "Description:\n" +
-                            "You recognize both the advantages and risks of \n" +
-                            "technology. You believe innovation improves \n" + 
-                            "people’s lives, but it also requires clear laws, \n" +
-                            "accountability, and responsible oversight to \n" +
-                            "protect society.";
+
+                    case 4, 5:
+                        profile = "The Cautious Realist\n\n"
+                                + "Description:\n"
+                                + "You recognize both the advantages and risks of \n"
+                                + "technology. You believe innovation improves \n"
+                                + "people’s lives, but it also requires clear laws, \n"
+                                + "accountability, and responsible oversight to \n"
+                                + "protect society.";
                         break;
-                    case 2,3:
-                        profile = "The Privacy Guardian\n" +
-                            "\n" +
-                            "Description:\n" +
-                            "You believe ethics and personal privacy should \n" + 
-                            "always come before technological progress. \n" + 
-                            "While technology can be beneficial, companies \n" + 
-                            "must be closely regulated to prevent data misuse, \n" + 
-                            "surveillance, and algorithmic bias.";
+
+                    case 2, 3:
+                        profile = "The Privacy Guardian\n\n"
+                                + "Description:\n"
+                                + "You believe ethics and personal privacy should \n"
+                                + "always come before technological progress. \n"
+                                + "While technology can be beneficial, companies \n"
+                                + "must be closely regulated to prevent data misuse, \n"
+                                + "surveillance, and algorithmic bias.";
                         break;
+
                     default:
-                        profile = "The Tech Skeptic\n" +
-                            "\n" +
-                            "Description:\n" +
-                            "You’re highly skeptical of modern technology \n" + 
-                            "and big tech companies. You believe that \n" + 
-                            "profit-driven innovation often comes at the \n" + 
-                            "cost of human rights, privacy, and social fairness.";
+                        profile = "The Tech Skeptic\n\n"
+                                + "Description:\n"
+                                + "You’re highly skeptical of modern technology \n"
+                                + "and big tech companies. You believe that \n"
+                                + "profit-driven innovation often comes at the \n"
+                                + "cost of human rights, privacy, and social fairness.";
                 }
+
+                // Display final profile result
                 Result.setText(profile);
             }
         });
     }
 
     /**
-     * This method is called from within the constructor to initialize the form.
-     * WARNING: Do NOT modify this code. The content of this method is always
-     * regenerated by the Form Editor.
+     * This method initializes the GUI components.
+     * WARNING: Do NOT modify this code manually.
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
