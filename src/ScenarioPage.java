@@ -15,6 +15,8 @@ public class ScenarioPage extends javax.swing.JFrame {
      */
     public ScenarioPage() {
         initComponents();
+        description.setLineWrap(true);
+        description.setWrapStyleWord(true);
         
     }
 

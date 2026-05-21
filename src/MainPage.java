@@ -111,10 +111,38 @@ public class MainPage extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        loadQuestion();
         new ScenarioPage().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
-
+public static void loadQuestion(){
+    try{
+        File question = new File("src/question1.txt");
+        try (Scanner questionInput = new Scanner(question)) {
+            int index = 0;
+            while (questionInput.hasNextLine() && index<8){
+                String line = questionInput.nextLine();
+                String [] part = line.split(",");
+                String title = part[0];
+                String category = part[1];
+                String description = part[2];
+                String type = part[3];
+                if (category.equalsIgnoreCase("Privacy")){
+                    cases[index] = new PrivacyCase(title, description, type);
+                }else if (category.equalsIgnoreCase("Algorithm")){
+                    cases[index] = new AlgorithmCase(title, description, type);
+                }else if (category.equalsIgnoreCase("IntellectualProperty")){
+                    cases[index] = new IntellectualPropertyCase(title, description, type);
+                }else if(category.equalsIgnoreCase("Misinformation")){
+                    cases[index] = new MisinformationCase(title, description, type);
+                }
+                index++;
+            }
+        }
+    }catch(IOException e){
+        System.out.println("error");
+    }
+}
     /**
      * @param args the command line arguments
      */
@@ -142,32 +170,7 @@ public class MainPage extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
-        try{
-            File question = new File("question1.txt");
-            try (Scanner questionInput = new Scanner(question)) {
-                int index = 0;
-                while (questionInput.hasNextLine() && index<8){
-                    String line = questionInput.nextLine();
-                    String [] part = line.split(",");
-                    String title = part[0];
-                    String category = part[1];
-                    String type = part[2];
-                    String description = part[3];
-                    if (category.equalsIgnoreCase("Privacy")){
-                        cases[index] = new PrivacyCase(title, description, type);
-                    }else if (category.equalsIgnoreCase("Algorithm")){
-                        cases[index] = new AlgorithmCase(title, description, type);
-                    }else if (category.equalsIgnoreCase("IntellectualProperty")){
-                        cases[index] = new IntellectualPropertyCase(title, description, type);
-                    }else if(category.equalsIgnoreCase("Misinformation")){
-                        cases[index] = new MisinformationCase(title, description, type);
-                    }
-                    index++;
-                }
-            }
-        }catch(IOException e){
-            System.out.println("error");
-        }
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override

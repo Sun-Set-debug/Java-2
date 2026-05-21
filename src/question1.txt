@@ -1,8 +1,8 @@
-The Always-On Microphone, A smart speaker company recorded \nhousehold conversations even when \nthe device was not activated. Employees \nreviewed the recordings.,audio recordings
-The Health App Leak,A fitness tracking application \nquietly sold users' heart rates and \nsleep cycles to private health \ninsurance corporations to \nadjust premiums.,biometric and health data
-The Biased Hiring Bot,An AI resume screener trained on \nhistorical tech industry data \nautomatically downgraded applications \ncontaining the word 'women's'.,gender discrimination
-Predictive Policing Error,An algorithmic facial recognition \nsoftware used by police falsely \nmatched an innocent citizen with a \nsuspect due to poor training data.,racial misidentification
-The Deepfake Election Video,A highly realistic, AI-generated \nvideo of a political candidate \nadmitting to bribery was circulated \non social media two days \nbefore voting.,deepfake video
-The Synthetic Health Article,An automated blog network used \nlarge language models to generate \nthousands of fake medical articles \nclaiming lemon juice cures \nviral infections.,AI-generated text
-The Copied Codebase,A generative AI coding assistant \nsuggested an entire block of \nproprietary, copyrighted software \nengineering code without \nattribution or license.,source code software license
-The AI Art Generation,A commercial image generator was \ntrained on millions of digital \npaintings from independent artists \nwithout their explicit consent \nor royalties.,digital artwork and illustrations
+The Always-On Microphone,Privacy, A smart speaker company recorded household conversations even when the device was not activated. Employees reviewed the recordings,audio recordings
+The Health App Leak,Privacy, A fitness tracking application quietly sold users' heart rates and sleep cycles to private health insurance corporations to adjust premiums,biometric and health data
+The Biased Hiring Bot,Algorithm, An AI resume screener trained on historical tech industry data automatically downgraded applications containing the word 'women's',gender discrimination
+Predictive Policing Error,Algorithm, An algorithmic facial recognition software used by police falsely matched an innocent citizen with a suspect due to poor training data,racial misidentification
+The Deepfake Election Video,Misinformation, A highly realistic AI-generated video of a political candidate admitting to bribery was circulated on social media two days before voting,deepfake video
+The Synthetic Health Article,Misinformation, An automated blog network used large language models to generate thousands of fake medical articles claiming lemon juice cures viral infections,AI-generated text
+The Copied Codebase,IntellectualProperty, A generative AI coding assistant suggested an entire block of proprietary, copyrighted software engineering code without attribution or license,source code software license
+The AI Art Generation,IntellectualProperty, A commercial image generator was trained on millions of digital paintings from independent artists without their explicit consent or royalties,digital artwork and illustrations

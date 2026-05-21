@@ -12,6 +12,7 @@ class AlgorithmCase extends EthicsCase {
     public AlgorithmCase(String caseTitle, String description, String biasType){
         super(caseTitle, description, "AlgorithmCase");
         this.biasType = biasType;
+        this.verdict = new Verdict();
     }
     public String getBiasType(){
         return biasType;

@@ -12,6 +12,7 @@ class PrivacyCase extends EthicsCase{
     public PrivacyCase(String caseTitle, String description, String dataType){
         super(caseTitle, description, "PrivacyCase");
         this.dataType = dataType;
+        this.verdict = new Verdict();
     }
     public String getDataType(){
         return dataType;

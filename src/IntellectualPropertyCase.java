@@ -21,6 +21,7 @@ public class IntellectualPropertyCase extends EthicsCase {
         // Calls EthicsCase constructor with "Intellectual Property" as the category
         super(caseTitle, description, "Intellectual Property");
         this.ipType = ipType;
+        this.verdict = new Verdict();
     }
 
     /**
