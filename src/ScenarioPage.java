@@ -163,7 +163,7 @@ public class ScenarioPage extends javax.swing.JFrame {
 public void setQuestion() {
 
     // If there are still questions left
-    if (MainPage.qIndex != 8) {
+    if (MainPage.qIndex != MainPage.TOTAL_QUESTIONS) {
 
         // Set UI components using current case data
         Title.setText(MainPage.cases[MainPage.qIndex].getCaseTitle());
@@ -203,8 +203,7 @@ public static void saveFile() {
 
     try {
 
-        try (PrintWriter output =
-                     new PrintWriter(new FileWriter("src/result.txt", false))) {
+        try (PrintWriter output = new PrintWriter(new FileWriter("src/result.txt", false))) {
 
             for (int i = 0; i < MainPage.cases.length; i++) {
 

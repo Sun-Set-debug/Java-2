@@ -37,6 +37,7 @@ public class ResultPage extends javax.swing.JFrame {
                 for (EthicsCase c : MainPage.cases) {
 
                     if (c != null && c.verdict != null) {
+                        System.out.println(c.toString());
 
                         String choice = c.verdict.getStudentVerdict();
 

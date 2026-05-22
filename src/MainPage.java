@@ -29,6 +29,8 @@ public class MainPage extends javax.swing.JFrame {
 
     // Counts how many times the user selected "unethical"
     public static int unethicalCount = 0;
+    
+    public static final int TOTAL_QUESTIONS = 8;
 
     /**
      * Constructor for MainPage.
@@ -156,10 +158,10 @@ public static void loadQuestion() {
                 // Split each line into parts using comma separator
                 String[] part = line.split(",");
 
-                String title = part[0];
-                String category = part[1];
-                String description = part[2];
-                String type = part[3];
+                String title = part[0].trim();
+                String category = part[1].trim();
+                String description = part[2].trim();
+                String type = part[3].trim();
 
                 // Create appropriate subclass based on category
                 if (category.equalsIgnoreCase("Privacy")) {
